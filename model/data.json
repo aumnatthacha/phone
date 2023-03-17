@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "nameMobile": "OPPO A78 5G",
+        "seleMobile": "8,499 บาท",
+        "osMobile": "Android12",
+        "ramMobile": "Ram 4 GB",
+        "batterryMobile": "5000 mAh",
+        "imgMobile": "w1.png"
+    },
+    {
+        "id": 2,
+        "nameMobile": "OPPO RENO8 T 5G",
+        "seleMobile": "13,990 บาท",
+        "osMobile": "Android12",
+        "ramMobile": "Ram 6 GB",
+        "batterryMobile": "5500 mAh",
+        "imgMobile": "w2.png"
+    },
+    {
+        "id": 3,
+        "nameMobile": "Iphone21 PRO MAX",
+        "seleMobile": "88,499 บาท",
+        "osMobile": "IOS",
+        "ramMobile": "M2",
+        "batterryMobile": "11500 mAh",
+        "imgMobile": "w3.png"
+    }
+]

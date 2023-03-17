@@ -1,3 +1,14 @@
+<!-- controller -->
+<?php
+    include_once("model/functionJSON.php");
+
+    $id = isset($_GET["id"]) ? htmlspecialchars($_GET["id"]) : NULL;
+    $filename = 'model/co.json';
+    $obj_name = new mobile();
+    $rs2 = $obj_name->GETFN($filename);
+    $BCode = $id - 1;
+?>
+<!-- view -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,19 +24,19 @@
 <body>
 <div class="w3-container w3-center">
 <h3>สเปคมือถือ</h3>
-  <img src="https://media-cdn.bnn.in.th/266447/OPPO-Smartphone-A78-Glowing-Purple-5G-1-square_medium.jpg" alt="Avatar" style width="277.6" height="277.6">
-  <h5>OPPO A 78 5G
+  <img src="<?= $rs2[$BCode]->img ?>" alt="Avatar" style width="277.6" height="277.6">
+  <h5><?= $rs2[$BCode]->name ?>
   </h5>
-  <h5>8,499 บาท</h5>
+  <h5><?= $rs2[$BCode]->price ?></h5>
 </div>
 <hr>
 <div  class="w3-container w3-center" >
 <h5>หน้าจอขนาด 6.56 นิ้ว</h5>
-<h5>แบตเตอรี่ความจุสูง 5,000 mAh</h5>
-<h5>กล้อง AI 50MP ภาพคมชัดเป็นพิเศษ</h5>
+<h5><?= $rs2[$BCode]->camera ?></h5>
+<h5><?= $rs2[$BCode]->dattery ?></h5>
 <h5>ลำโพงสเตอริโอคู่เสียงหนักแน่นทรงพลัง</h5>
 
-<button class="w3-btn w3-red">Decline</button>
+<a href="phone.php" class="w3-btn w3-red">Decline</a>
 </div>
 </body>
 </html>
